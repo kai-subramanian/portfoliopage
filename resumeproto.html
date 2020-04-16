@@ -1,0 +1,183 @@
+<html>
+	<head>
+		<style>
+			h2,h3,p{
+				color:#ffffff;
+				font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				font-size: 50px;
+			}
+			table{
+				border-color:#ffffff;
+				color:#ffffff;
+				font-size: 20px;
+				font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				font-weight: Bold;
+			}
+			.firstrb{
+				background-image: linear-gradient(to right, rgb(219, 0, 110),rgb(255, 102, 0),red);   
+      			-webkit-background-clip: text;
+      			-moz-background-clip: text; 
+      			background-clip: text;
+      			color: transparent;
+			}
+			.secrb{
+				background-image: linear-gradient(to left,yellow,violet,blue,green);   
+      			-webkit-background-clip: text;
+      			-moz-background-clip: text; 
+      			background-clip: text;
+      			color: transparent;
+			}
+			.rrb{
+				background-image: linear-gradient(to left, rgb(175, 175, 175),rgb(179, 179, 179));   
+      			-webkit-background-clip: text;
+      			-moz-background-clip: text; 
+      			background-clip: text;
+      			color: transparent;
+			}
+		</style>
+		<center><h2 class="rrb"><b>R E S U M E</b></h2></center>
+		<center><h2 class="rrb"><b> - - - - - - - - - - - - - - </b></h2></center>
+	</head>
+	<body style="background-color: #131313">
+		<script>
+			var fn=sessionStorage.getItem("firstname");
+			var ln=sessionStorage.getItem("lastname");
+			var ph=sessionStorage.getItem("phonenumber");
+			var ei=sessionStorage.getItem("emailid");
+			var ssf=sessionStorage.getItem("secschoolfrom");
+			var sst=sessionStorage.getItem("secschoolto");
+			var sss=sessionStorage.getItem("secschool");
+			var hsf=sessionStorage.getItem("hischoolfrom");
+			var hst=sessionStorage.getItem("hischoolto");
+			var hs=sessionStorage.getItem("hischool");
+			var ug=sessionStorage.getItem("undergraduat");
+			var ugf=sessionStorage.getItem("ugfromdate");
+			var ugt=sessionStorage.getItem("ugtodate");
+			var ugc=sessionStorage.getItem("ugcollege");
+			var pgf=sessionStorage.getItem("pgfromdate");
+			var pgt=sessionStorage.getItem("pgtodate");
+			var pgc=sessionStorage.getItem("pgcollege");
+			var pg=sessionStorage.getItem("postgraduat");
+			var ad=sessionStorage.getItem("address");
+			var abme=sessionStorage.getItem("aboutme");
+			//professional
+			var cs=sessionStorage.getItem("cskills");
+			var js=sessionStorage.getItem("jskills");
+			var hcs=sessionStorage.getItem("hcskills");
+			var jss=sessionStorage.getItem("jsskills");
+			var dss=sessionStorage.getItem("dsskills");
+			var dbs=sessionStorage.getItem("dbskills");
+			//personal
+			var cos=sessionStorage.getItem("communicational");
+			var os=sessionStorage.getItem("organisational");
+			var ms=sessionStorage.getItem("motivational");
+			var ls=sessionStorage.getItem("leader");
+			var rs=sessionStorage.getItem("resilience");
+			var is=sessionStorage.getItem("interpersonal");
+			//work
+			var w1=sessionStorage.getItem("work1");
+			var w2=sessionStorage.getItem("work2");
+			var w3=sessionStorage.getItem("work3");
+
+			var w1f=sessionStorage.getItem("w1from");
+			var w1t=sessionStorage.getItem("w1to");
+
+			var w2f=sessionStorage.getItem("w2from");
+			var w2t=sessionStorage.getItem("w2to");
+
+			var w3f=sessionStorage.getItem("w3from");
+			var w3t=sessionStorage.getItem("w3to");
+			//interest
+			var i1=sessionStorage.getItem("int1");
+			var i2=sessionStorage.getItem("int2");
+			var i3=sessionStorage.getItem("int3");
+			var imag=sessionStorage.getItem("userimage");
+			//image
+			//var loadFile = function(event) {
+			//	var image = document.getElementById('output');
+			//	image.src = URL.createObjectURL(event.target.files[0]);
+			//};
+			document.write("<table>");
+				document.write("<tr><td>");
+				document.write("<h1 class='firstrb' style='font-size:90px'>"+fn+" "+ln+"</h1>");
+				document.write("</td><td>");
+				document.write("</td><td>");
+				//document.write('<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display:none"></p>');
+				document.write('<img src="'+imag+'" width=200 height=200>'+'</td>');
+				document.write("</tr>");
+				document.write("<tr><td>");
+				document.write("<h3 class='secrb' style='font-size:65px'>About↓</h3></td></tr>");
+				document.write("<tr><td>"+abme+"</td></tr>");
+				document.write("<br>");
+				document.write("<tr><td><br><br>");
+					document.write("<table border=0 cellspacing=0>");
+						document.write("<tr><td>");
+						document.write("<h3 class='secrb'>EDUCATIONAL<br>DETAILS<h3></td>");
+						document.write("<td colspan=3><table border=0>");
+							document.write("<tr>");
+								if(pg==="Yet to Pursue"){
+									document.write("");
+								}
+								else{
+									document.write("<td style='padding-top:30px;padding-left:10px;padding-right:40px' colspan=2>"+pg+","+pgc+",<br>"+pgf+" to "+pgt+"</td>");
+								}
+								document.write("<td style='padding-top:20px;padding-left:10px';padding-right:40px>"+ug+","+ugc+",<br>"+ugf+" to "+ugt+"</td>");
+								document.write("<td style='padding-top:20px;padding-left:10px';padding-right:40px>"+"High School"+","+hs+",<br>"+hsf+" to "+hst+"</td>");
+								document.write("<td style='padding-top:20px;padding-left:10px';padding-right:40px>"+"Secondary School"+","+sss+",<br>"+ssf+" to "+sst+"</td>");
+							document.write("</tr");
+						document.write("</table>");
+						document.write("</td>");
+					document.write("</table>");
+					document.write("<tr>");
+						document.write("<td>"+"<br><br>"+"</td");
+					document.write("</tr>");
+					document.write("<tr>");
+					document.write("<td>");
+						document.write("<h3 class='secrb'>WORK<br>EXPERIENCE<br>↓</h3>"+"</td>");
+						document.write("</tr><tr>");
+						document.write("<td><ul type='disc' style='font-size:25px'><li>"+w1+",<br>"+w1f+" to "+w1t+"</li></td>");
+						document.write("<td><ul type='disc' style='font-size:25px'><li>"+w2+",<br>"+w2f+" to "+w2t+"</li></td>");
+						document.write("<td><ul type='disc' style='font-size:25px'><li>"+w3+",<br>"+w3f+" to "+w3t+"</li></td>");
+					document.write("</td></tr>");
+					document.write("</tr>");	
+					document.write("<tr><td style='font-size:50px;padding-left:10px;padding-top:30px'>");
+						document.write("<h2 class='secrb'>OTHER<br>INTERESTS</h2>");
+						document.write("<td style='padding-left:10px;padding-top:50px'><ul><li>"+i1+"</li><li>"+i2+"</li><li>"+i3+"</li></ul>");
+					document.write("</td>");
+					document.write("<tr>");
+						document.write("<td style='padding-left:10px;padding-top:50px;font-size:50px'>"+"<h2 class='secrb'>PERSONAL<br>SKILLS</h2>"+"</td>");
+						document.write("<td>");
+							document.write("<table cellspacing=0 border=0 style='padding-left:29px'>");
+								document.write("<tr><td>"+"C++               "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+cs+"</td></tr>");
+								document.write("<tr><td>"+"Java              "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+js+"</td></tr>");
+								document.write("<tr><td>"+"HTML/CSS          "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+hcs+"</td></tr>");
+								document.write("<tr><td>"+"JavaScript        "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+jss+"</td></tr>");
+								document.write("<tr><td>"+"Data Structures   "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+dss+"</td></tr>");
+								document.write("<tr><td>"+"Database Systems  "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+dbs+"</td></tr>");
+							document.write("</table>");
+						document.write("</td></tr>");
+						document.write("<tr>");
+						document.write("<td style='padding-left:10px;padding-top:50px;font-size:50px'>"+"<h2 class='secrb'>PROFESSIONAL<br>SKILLS</h2>"+"</td><td>");
+							document.write("<table cellspacing=0 border=0 style='padding-left:29px;padding-top:10px'>");
+								document.write("<tr><td>"+"Organisational    "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+os+"</td></tr>");
+								document.write("<tr><td>"+"Communication     "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+cos+"</td></tr>");
+								document.write("<tr><td>"+"Leadership        "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+ls+"</td></tr>");
+								document.write("<tr><td>"+"Motivation        "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+ms+"</td></tr>");
+								document.write("<tr><td>"+"Resilience        "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+rs+"</td></tr>");
+								document.write("<tr><td>"+"Interpersonal     "+"</td><td>"+"&nbsp&nbsp&nbsp&nbsp&nbsp→&nbsp&nbsp"+is+"</td></tr>");
+							document.write("</table>");
+						document.write("</td>");
+
+					document.write("</tr>");
+					document.write("<tr>");
+						document.write("<td style='font-size:50px;padding-left:10px;padding-top:30px'>");
+						document.write("<h2 class='secrb'>CONTACT<br>DETAILS</h2>");
+						document.write("<td style='padding-left:10px;padding-top:50px'><ul><li>"+"Phone No: "+ph+"</li><li>"+"eMail ID : "+ei+"</li><li>"+"Address:<br>"+ad+"</li></ul>");
+						document.write("</td>");
+					document.write("</tr>");
+					document.write("</td>");
+					
+			document.write("</table>");
+		</script>
+	</body>
+</html>

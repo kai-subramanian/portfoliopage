@@ -1,0 +1,295 @@
+<html>
+<head>
+	<center><h1 class="firstrb" style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bolder">Create your own resume ! </h1>
+	<h3 class="firstrb" style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: light">Enter the required details</h3></center>
+	<script type="text/javascript">
+		function passtoresume(){
+			//personal details
+			var fname=document.getElementById("fn").value;
+			sessionStorage.setItem("firstname",fname);
+			var lname=document.getElementById("ln").value;
+			sessionStorage.setItem("lastname",lname);
+			var phno=document.getElementById("ph").value;
+			sessionStorage.setItem("phonenumber",phno);
+			var add=document.getElementById("addr").value;
+			sessionStorage.setItem("address",add);
+			var abm=document.getElementById("am").value;
+			sessionStorage.setItem("aboutme",abm);
+			var emid=document.getElementById("ei").value;
+			sessionStorage.setItem("emailid",emid);
+			//educational details
+			var sf=document.getElementById("ssf").value;
+			sessionStorage.setItem("secschoolfrom",sf);
+			var st=document.getElementById("sst").value;
+			sessionStorage.setItem("secschoolto",st);
+			var sss=document.getElementById("ss").value;
+			sessionStorage.setItem("secschool",sss);
+			var hf=document.getElementById("hsf").value;
+			sessionStorage.setItem("hischoolfrom",hf);
+			var ht=document.getElementById("hst").value;
+			sessionStorage.setItem("hischoolto",ht);
+			var hss=document.getElementById("hs").value;
+			sessionStorage.setItem("hischool",hss);
+			var ug=document.getElementById("ug").value;
+			sessionStorage.setItem("undergraduat",ug);
+			var ugf=document.getElementById("ugf").value;
+			sessionStorage.setItem("ugfromdate",ugf);
+			var ugt=document.getElementById("ugt").value;
+			sessionStorage.setItem("ugtodate",ugt);
+			var ugc=document.getElementById("uc").value;
+			sessionStorage.setItem("ugcollege",ugc)
+			var pg=document.getElementById("pg").value;
+			sessionStorage.setItem("postgraduat",pg);
+			var pgf=document.getElementById("pgf").value;
+			sessionStorage.setItem("pgfromdate",pgf);
+			var pgt=document.getElementById("pgt").value;
+			sessionStorage.setItem("pgtodate",pgt);
+			var pgc=document.getElementById("pc").value;
+			sessionStorage.setItem("pgcollege",pgc);
+			//professionalskills
+			var cs=document.getElementById("cskill").value;
+			sessionStorage.setItem("cskills",cs);
+			var js=document.getElementById("jskill").value;
+			sessionStorage.setItem("jskills",js);
+			var hcs=document.getElementById("hcskill").value;
+			sessionStorage.setItem("hcskills",hcs);
+			var jss=document.getElementById("jsskill").value;
+			sessionStorage.setItem("jsskills",jss);
+			var dss=document.getElementById("dsskill").value;
+			sessionStorage.setItem("dsskills",dss);
+			var dbs=document.getElementById("dbskill").value;
+			sessionStorage.setItem("dbskills",dbs);
+			//personalskills
+			var os=document.getElementById("oskill").value;
+			sessionStorage.setItem("organisational",os);
+			var cos=document.getElementById("comskill").value;
+			sessionStorage.setItem("communicational",cos);
+			var ms=document.getElementById("mskill").value;
+			sessionStorage.setItem("motivational",ms);
+			var ls=document.getElementById("lskill").value;
+			sessionStorage.setItem("leader",ls);
+			var rs=document.getElementById("rskill").value;
+			sessionStorage.setItem("resilience",rs);
+			var iss=document.getElementById("iskill").value;
+			sessionStorage.setItem("interpersonal",iss);
+			//workexperience
+			var w1=document.getElementById("w1").value;
+			sessionStorage.setItem("work1",w1);
+
+			var w1f=document.getElementById("w1f").value;
+			sessionStorage.setItem("w1from",w1f);
+			var w1t=document.getElementById("w1t").value;
+			sessionStorage.setItem("w1to",w1t);
+
+			var w2f=document.getElementById("w2f").value;
+			sessionStorage.setItem("w2from",w2f);
+			var w2t=document.getElementById("w2t").value;
+			sessionStorage.setItem("w2to",w2t);
+
+			var w3f=document.getElementById("w3f").value;
+			sessionStorage.setItem("w3from",w3f);
+			var w3t=document.getElementById("w3t").value;
+			sessionStorage.setItem("w3to",w3t);
+
+			var w2=document.getElementById("w2").value;
+			sessionStorage.setItem("work2",w2);
+			var w3=document.getElementById("w3").value;
+			sessionStorage.setItem("work3",w3);
+			//interests
+			var i1=document.getElementById("i1").value;
+			sessionStorage.setItem("int1",i1);
+			var i2=document.getElementById("i2").value;
+			sessionStorage.setItem("int2",i2);
+			var i3=document.getElementById("i3").value;
+			sessionStorage.setItem("int3",i3);
+
+			var img1 = document.getElementById("pro_pic").value;
+			sessionStorage.setItem("userimage",img1);
+			
+		}
+		function validateEmail(emailField){
+        	var emailregex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        	if (emailregex.test(emailField.value) == false) {
+            	alert('Invalid Email Address; reload and click ok and redo');
+            	return false;
+        	}
+        	return true;
+    	}
+    	function validatePhone(mobno){
+    		var mobregex=/^\d{10}$/
+    		if(mobregex.test(mobno.value)==false){
+    			alert("Invalid Phone Number; reload and click ok and redo");
+    			return false;
+    		}
+    		return true;
+    	}
+    	function validateBG(blogr){
+    		var bgregex=/(A|B|AB|O)[+-]/
+    		if(bgregex.test(blogr.value)==false){
+    			alert("Invalid blood group; reload and click ok and redo");
+    			return false;
+    		}
+    		return true;
+    	}
+	</script>
+	<style>
+		input,textarea{
+			width:100%;
+			padding:12px 20px;
+			margin:8px 0px;
+			box-sizing:border-box;
+			border: 2px solid black;
+			border-radius: 4px;
+			transition:0.5s;
+			outline:none;
+			resize: none;
+
+		}
+		input:focus,textarea:focus{
+			border: 2px solid rgb(88, 88, 88);		
+		}	
+		fieldset
+		{
+			padding: 20px 100px;
+		}
+		body{
+			padding: 20px 250px;
+		}
+		legend{
+			text-emphasis-style: bold;
+			font-size:50px;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			background-image: linear-gradient(to right, rgb(0, 255, 242),rgb(0, 255, 106),rgb(0, 110, 201));   
+      			-webkit-background-clip: text;
+      			-moz-background-clip: text; 
+      			background-clip: text;
+      			color: transparent;
+		}
+		.firstrb{
+			background-image: linear-gradient(to right, rgb(219, 0, 110),rgb(255, 102, 0));   
+      			-webkit-background-clip: text;
+      			-moz-background-clip: text; 
+      			background-clip: text;
+      			color: transparent;
+		}
+	</style>
+</head>
+<body style="background-color:#202020;color:white;text-align:center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+	<form style="text-align: center;"action="resumeproto.html" name="form1" id="f1" onsubmit=passtoresume()>
+
+	<fieldset style="margin: auto; text-align: center;">
+		<legend>Personal Details</legend>
+			First Name <span style="color:red">*</span>:
+			<input type="text" id="fn" onblur="validateName(this)" required/><br><br>
+			Last Name<span style="color:red">*</span>:
+			<input type="text" id="ln" required/><br><br>
+			Phone Number<span style="color:red">*</span>:
+			<input type="text" id="ph" onblur="validatePhone(this)" required/><br><br>
+			eMail ID<span style="color:red">*</span>:
+			<input type="text" id="ei" onblur="validateEmail(this)" required/><br><br>
+			Blood Group:<input type="text" id="bg" onblur="validateBG(this)" /><br><br>
+			Address<span style="color:red">*</span>:<br>
+			<textarea id="addr" rows=4 cols=50  required></textarea><br><br>
+			About You<span style="color:red">*</span>:<br>
+			<textarea id="am" rows=4 cols=50  required></textarea><br><br>
+			Date of Birth<span style="color:red">*</span>
+			<input type="date" id="dob" required/><br><br>
+	</table>
+	</fieldset>
+		
+	<fieldset>
+		<legend>Educational Details</legend>
+		Secondary School<span style="color:red">*</span>:<input type="text" id="ss" required/><br><br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFrom :<span style="color:red">*</span><input type="date" id="ssf"/>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTo :<span style="color:red">*</span><input type="date" id="sst"/><br><br>
+		High School<span style="color:red">*</span>:<input type="text" id="hs" required/><br><br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFrom :<span style="color:red">*</span><input type="date" id="hsf" required/>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTo :<span style="color:red">*</span><input type="date" id="hst" required/><br><br>
+		UG Degree<span style="color:red">*</span>:
+		<select name="UG" id="ug">
+			<option value="B.E" id="B.E">B.E.</option>
+			<option value="B.Tech" id="B.Tech">B.Tech.</option>
+			<option value="B.Sc" id="B.Sc">B.Sc.</option>
+		</select><br><br>
+		UG College: <input type="text" id="uc" required>
+		<br><br>
+		<table border=0 cellspacing=0>
+		<tr>
+			<td>From :*<input type="date" id="ugf" required/></td>
+			<td>To :*<input type="date" id="ugt" required/></td>
+		</tr>
+		</table>
+		PG Degree:	
+		<select name="PG" id="pg">
+			<option value="Yet to Pursue" id="ytp">Yet to Pursue</option>
+			<option value="M.E" id="M.E.">M.E.</option>
+			<option value="M.Tech" id="M.Tech.">M.Tech.</option>
+			<option value="M.Sc." id="M.Sc.">M.Sc.</option>
+		</select><br><br>
+		PG College: <input type="text" id="pc">
+		<br><br>
+		<table border=0 cellspacing=0>
+			<tr>
+				<td>From :*<input type="date" id="pgf"/></td>
+				<td>To :*<input type="date" id="pgt"/></td>
+			</tr>
+		</table>
+
+	</fieldset>
+	<fieldset>
+		<legend>Work Experience</legend>
+		<textarea id="w1" rows=7 cols=17></textarea><br><br>
+		<table border=0 cellspacing=0>
+			<tr>
+				<td>From :*<input type="date" id="w1f" required/></td>
+				<td>To :*<input type="date" id="w1t" required/></td>
+			</tr>
+			</table>
+		<textarea id="w2" rows=7 cols=17></textarea><br><br>
+		<table border=0 cellspacing=0>
+			<tr>
+				<td>From :*<input type="date" id="w2f" required/></td>
+				<td>To :*<input type="date" id="w2t" required/></td>
+			</tr>
+			</table>
+		<textarea id="w3" rows=7 cols=17></textarea>
+		<table border=0 cellspacing=0>
+			<tr>
+				<td>From :*<input type="date" id="w3f" required/></td>
+				<td>To :*<input type="date" id="w3t" required/></td>
+			</tr>
+			</table>
+	</fieldset>
+		
+	<fieldset>	
+		<legend>Professional Skills</legend>	
+		C++ <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="cskill" required>
+		Java <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="jskill"required><br><br>
+		HTML/CSS <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="hcskill"required>
+		JavaScript <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="jsskill"required><br><br>
+		Data Structures <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="dsskill"required>
+		Database Systems <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="dbskill"required><br><br>
+	</fieldset>
+		<fieldset>
+			<legend>Personal Skills</legend>
+		Organisational<span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="oskill" required>
+		Communication <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="comskill" required><br><br>
+		Motivation <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="mskill" required>
+		Leadership <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="lskill" required><br><br>
+		Resilience <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="rskill" required>
+		Interpersonal <span style="color:red">*</span>: <input type="range" min="1" max="10" value="5" class="slider" id="iskill" required><br><br>
+		</fieldset>
+		<fieldset>
+			<legend>Other Interests</legend>
+			<input type=text id="i1"><br><br>
+			<input type=text id="i2"><br><br>
+			<input type=text id="i3"><br><br>
+		</fieldset>
+		<fieldset>
+			Enter URL for image<input type=text id="pro_pic">
+		</fieldset>
+
+		<input type="submit" value="Create Resume ! " onclick="passtoresume();resumeproto.html;"><br><br>
+	</form>
+</body>
+</html>
